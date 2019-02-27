@@ -1,0 +1,19 @@
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .input {
+    width: 205px;
+    height: 38px;
+    padding: 10px 11px;
+    border: 1px solid rgb(180, 176, 176);
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 14px;
+    border-radius: 3px;
+    outline: none;
+
+    &:focus {
+      border-color: #85b7d9;
+    }
+  }
+}
