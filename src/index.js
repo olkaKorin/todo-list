@@ -36,7 +36,7 @@ class App extends React.Component {
         </div>
       );
     } else {
-      return <div>spinner</div>;
+      return <div>hello</div>;
     }
   }
 
