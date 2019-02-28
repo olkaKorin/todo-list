@@ -2,6 +2,20 @@
   height: 40px;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid rgb(105, 30, 30);
-  color: rgb(184, 109, 24);
+  color: #fff;
+  background: rgb(64, 184, 138);
+  animation-duration: 0.2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
