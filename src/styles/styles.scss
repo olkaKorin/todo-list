@@ -20,16 +20,14 @@ body {
 }
 
 .app {
-  width: 100%;
-  height: 100%;
-}
+  display: flex;
+  flex-direction: column;
 
-.app-list-form {
-  width: 500px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  .app-list-form {
+    align-self: center;
+    margin-top: 245px;
+    width: 500px;
+  }
 }
 
 @import "variables";
