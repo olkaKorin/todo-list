@@ -1,6 +1,6 @@
-import React from 'react'
-import ButtonDanger from '../../shared/buttons/delete'
-import Checkbox from '../../shared/inputs/checkbox'
+import React from "react";
+import ButtonDanger from "../../shared/buttons/delete";
+import Checkbox from "../../shared/inputs/checkbox";
 
 const List = props => {
   const items = props.list.map((item, index) => (
@@ -13,7 +13,7 @@ const List = props => {
         onClick={() => props.deleteItem(item.id)}
       />
     </li>
-  ))
-  return <ul className="list">{items}</ul>
-}
-export default List
+  ));
+  return <ul className="list">{items}</ul>;
+};
+export default List;
