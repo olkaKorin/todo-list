@@ -23,10 +23,11 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-
+  .header-comp {
+    margin-bottom: 200px;
+  }
   .app-list-form {
     align-self: center;
-    margin-top: 245px;
     width: 500px;
   }
 }

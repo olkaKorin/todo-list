@@ -6,6 +6,7 @@ import List from "./components/list";
 import Form from "./components/form";
 import { list } from "./consts";
 import Header from "./components/header";
+import ControlPanel from "./components/control-panel";
 
 class App extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class App extends React.Component {
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
     this.changeItemStatus = this.changeItemStatus.bind(this);
+    this.deleteAll = this.deleteAll.bind(this);
   }
 
   componentDidMount() {
@@ -24,9 +26,12 @@ class App extends React.Component {
     if (this.state.list) {
       return (
         <div className="app">
-          <Header />
+          <div className="header-comp">
+            <Header />
+          </div>
           <div className="app-list-form">
             <Form addItem={this.addItem} />
+            <ControlPanel deleteAll={this.deleteAll} />
             <List
               deleteItem={this.deleteItem}
               list={this.state.list}
@@ -55,6 +60,9 @@ class App extends React.Component {
     });
   }
 
+  deleteAll() {
+    this.setState({ list: [] });
+  }
   changeItemStatus(id) {
     const mappedList = this.state.list.map(item => {
       if (item.id === id) item.done = !item.done;

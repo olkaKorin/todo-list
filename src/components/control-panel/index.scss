@@ -1,0 +1,21 @@
+.control-panel {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  .checkbox-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5px 5px;
+    margin-right: 8px;
+    .done-input {
+      margin-bottom: 30px;
+    }
+  }
+  .clear-btn {
+    align-self: center;
+  }
+}
