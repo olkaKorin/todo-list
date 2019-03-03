@@ -1,4 +1,6 @@
 .list {
+  height: 500px;
+  overflow-y: auto;
   .item {
     color: rgb(24, 8, 68);
     display: flex;

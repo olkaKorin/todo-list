@@ -11,6 +11,23 @@ body {
   width: 100%;
   font-family: helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial,
     sans-serif;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(
+      top,
+      #b9c2c0 0%,
+      #7d8183 50%,
+      #5b5e5f 51%,
+      #4f4f52 100%
+    );
+  }
 }
 
 #root {
@@ -24,7 +41,7 @@ body {
   flex-direction: column;
   height: 100%;
   .header-comp {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
   }
   .app-list-form {
     align-self: center;
