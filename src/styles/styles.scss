@@ -40,12 +40,11 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  .header-comp {
-    margin-bottom: 150px;
-  }
   .app-list-form {
     align-self: center;
     width: 500px;
+    margin-top: 150px;
+    margin-bottom: 150px;
   }
 }
 
