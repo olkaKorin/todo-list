@@ -8,14 +8,43 @@ class ControlPanel extends Component {
     };
     return (
       <div className="margin-left-auto control-panel">
-        <div className="checkbox-input">
-          <div>
-            <input className="done-input" type="checkbox" /> <label>DONE</label>{" "}
-          </div>
-          <div>
-            <input type="checkbox" /> <label>TO DO</label>{" "}
-          </div>
-        </div>
+        <fieldset className="checkbox-input" id="filter">
+          <label>
+            <input
+              value="done"
+              name="filter"
+              className="margin-input"
+              checked={this.props.radio === "done"}
+              type="radio"
+              onChange={() => this.props.onRadioInputChange("done")}
+            />
+            Show only done items
+          </label>
+
+          <label>
+            <input
+              value="todo"
+              name="filter"
+              className="margin-input"
+              type="radio"
+              checked={this.props.radio === "todo"}
+              onChange={() => this.props.onRadioInputChange("todo")}
+            />
+            Show only to do items
+          </label>
+
+          <label>
+            <input
+              value="all"
+              name="filter"
+              type="radio"
+              checked={this.props.radio === "all"}
+              onChange={() => this.props.onRadioInputChange("all")}
+            />
+            Show all
+          </label>
+        </fieldset>
+
         <div className="clear-btn">
           <ButtonDanger title="Clear" onClick={onClear} />
         </div>
